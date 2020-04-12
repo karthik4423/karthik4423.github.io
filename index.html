@@ -1,59 +1,75 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Karthik Raj. I am a CS Undergraduate open for opportunities. Passionate coder and a part time writer.">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Karthik Raj">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <style>
-        * {
-            font-family: 'Open Sans', sans-serif;
-        }
-    </style>
     <title>Karthik Raj |CS Undergraduate</title>
 </head>
 
 <body>
-    <div class="container">
+    <div style="height: 30%;">
+        <pre>                               
+
+
+        </pre>
+    </div>
+    <div class="container" style="height: 100%;">
         <div class="row align-items-center" style="height:100%;">
             <div class="col-6">
                 <div class="row" style="justify-content: center;">
                     <div class="col-12">
                         <figure style="text-align: center; padding: 5px;">
-                            <img class="img-fluid img-responsive " src="assets/self.jpg " style="justify-content: center; " alt="Hmm. I usually show up here ">
-                            <figcaption>Me, 2020.</figcaption>
+                            <img class="img-fluid img-responsive " src="assets/person.svg" style="justify-content: center; " alt="Hmm. I usually show up here ">
+                            <figcaption></figcaption>
                         </figure>
                     </div>
                 </div>
             </div>
             <div class="col-6 ">
-                <div class="row ">
+                <div class="row justify-content-center ">
                     <div class="row justify-content-center ">
                         <p>Hey there, I'm Karthik Raj.</p>
-                        <p>I'm a <span id="age ">20</span> year old Indian programmer who lovs to write during free time.</p>
-                        <p>I'm a passionate coder, fond of building applications that help the world.</p>
+                        <p>I'm a <span id="age">20</span> year old passionate coder and a part time writer</p><br/>
+                        <p> <b>Carpe Diem!</b></p>
                     </div>
-                    <div class="row " style="width: 100%; justify-content: center; ">
-                        <div class="col-3 ">
-                            <a href=" ">
-                                <img class="img-fluid " height="42 " width="42 " src="assets/emailLight.svg "></img>
+                    <div class="row ">
+                        <div class="col-3">
+                            <a href="mailto:karthikraj4423@com?subject=Lead%20from%20your%20site%20">
+                                <img class="img-fluid " height="42" width="42" src="assets/emailLight.svg "></img>
                             </a>
                         </div>
-                        <div class="col-3 ">
-                            <a href=" ">
-                                <img class="img-fluid " height="42 " width="42 " src="assets/githubLogoLight.svg "></img>
+                        <div class="col-3">
+                            <a href="https://github.com/karthik4423/">
+                                <img class="img-fluid " height="42" width="42" src="assets/githubLogoLight.svg "></img>
                             </a>
                         </div>
-                        <div class="col-3 ">
-                            <a href=" ">
-                                <img class="img-fluid " height="42 " width="42 " src="assets/linkedinLogoLight.svg "></img>
+                        <div class="col-3">
+                            <a href="https://www.linkedin.com/in/karthikraj3/">
+                                <img class="img-fluid " height="42" width="42" src="assets/linkedinLogoLight.svg "></img>
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            <a href="https://medium.com/@karthikraj4423">
+                                <img class="img-fluid " height="42" width="42" src="assets/medium.svg "></img>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <footer style="text-align: center; ">Copyright &copy; Karthik Raj<span id="copyright"></span></footer>
+
     </div>
-    <footer style="text-align: center; ">Copyright &copy; Karthik Raj<span id="copyright "></span></footer>
+
 
     <script>
         window.onload = () => {
@@ -65,6 +81,7 @@
             document.getElementById('age').innerText = `${actualage}`;
         };
     </script>
+
 </body>
 
 </html>

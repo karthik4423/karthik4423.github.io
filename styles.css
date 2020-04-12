@@ -1,4 +1,16 @@
 p {
     text-align: center;
     padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666666;
+}
+
+footer {
+    text-align: center;
+    font-weight: lighter;
+}
+
+figcaption {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666666;
 }
