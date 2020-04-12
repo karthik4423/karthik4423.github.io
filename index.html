@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+    <title>Karthik Raj |CS Undergraduate</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row align-items-center" style="height:100%;">
+            <div class="col-6">
+                <div class="row" style="justify-content: center;">
+                    <div class="col-12">
+                        <figure style="text-align: center; padding: 5px;">
+                            <img class="img-fluid img-responsive " src="assets/me.jpg " style="justify-content: center; " alt="Hmm. I usually show up here ">
+                            <figcaption>Me, 2020.</figcaption>
+                        </figure>
+                    </div>
+                    <!--<div class="col-12 ">
+                        <p style="text-align: center; ">Me, 2020</p>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-6 ">
+                <div class="row ">
+                    <div class="row justify-content-center ">
+                        <p>Hey there, I'm Karthik Raj.</p>
+                        <p>I'm a <span id="age ">20</span> year old Indian programmer who lovs to write during free time.</p>
+                        <p>I'm a passionate coder, fond of building applications that help the world.</p>
+                    </div>
+                    <div class="row " style="width: 100%; justify-content: center; ">
+                        <div class="col-3 ">
+                            <a href=" ">
+                                <img class="img-fluid " height="42 " width="42 " src="assets/emailLight.svg "></img>
+                            </a>
+                        </div>
+                        <div class="col-3 ">
+                            <a href=" ">
+                                <img class="img-fluid " height="42 " width="42 " src="assets/githubLogoLight.svg "></img>
+                            </a>
+                        </div>
+                        <div class="col-3 ">
+                            <a href=" ">
+                                <img class="img-fluid " height="42 " width="42 " src="assets/linkedinLogoLight.svg "></img>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer style="text-align: center; ">Copyright &copy; Karthik Raj<span id="copyright "></span></footer>
+
+    <script>
+        window.onload = () => {
+            document.getElementById('copyright').innerText += ` ${new Date().getFullYear()}`;
+            const birthdate = new Date('03/26/1999');
+            const currentdate = new Date();
+            const age = (currentdate.getTime() - birthdate.getTime()) / (1000 * 3600 * 24 * 365);
+            const actualage = Math.floor(age);
+            document.getElementById('age').innerText = `${actualage}`;
+        };
+    </script>
+</body>
+
+</html>
