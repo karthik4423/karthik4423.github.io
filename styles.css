@@ -1,21 +1,40 @@
 p {
-    text-align: center;
-    padding: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #666666;
+  text-align: center;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666666;
 }
 
 footer {
-    text-align: center;
-    font-weight: lighter;
+  text-align: center;
+  font-weight: lighter;
 }
 
 figcaption {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #666666;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666666;
 }
 
 figure {
-    text-align: center;
-    box-shadow: 10px 10px 10px #eeeeee;
+  text-align: center;
+  /*box-shadow: 10px 10px 10px #eeeeee;*/
+}
+.me {
+  height: 300px;
+  width: 300px;
+}
+a:link {
+  color: red;
+}
+
+/* visited link */
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
 }
