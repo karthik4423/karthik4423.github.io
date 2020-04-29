@@ -1,13 +1,32 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  /*box-sizing: border-box;*/
+}
+
+* {
+  box-sizing: inherit;
+}
+
+h2 {
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
 p {
   text-align: center;
   padding: 5px;
+  margin: 5px;
   font-family: Arial, Helvetica, sans-serif;
   color: #666666;
 }
 
 footer {
   text-align: center;
-  font-weight: lighter;
+  font-weight: bolder;
+  position: absolute;
 }
 
 figcaption {
@@ -20,21 +39,23 @@ figure {
   /*box-shadow: 10px 10px 10px #eeeeee;*/
 }
 .me {
-  height: 300px;
-  width: 300px;
-}
-a:link {
-  color: red;
+  height: 50%;
+  width: 50%;
 }
 
-/* visited link */
-
-/* mouse over link */
-a:hover {
-  color: hotpink;
-}
-
-/* selected link */
+a,
+a:link,
+a:visited,
+a:hover,
 a:active {
-  color: blue;
+  color: #2d3644;
+  text-decoration: none;
+  border-bottom: 1px blue dotted;
+}
+a.nolink {
+  border-bottom: none;
+}
+
+.jumbotron {
+  background-color: #5674c4 !important ;
 }
