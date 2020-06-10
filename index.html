@@ -9,16 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=0.86, user-scalable=0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
     <title>Karthik Raj |CS Undergraduate</title>
 </head>
 
 <body style="width: auto;">
-    <div class="container" style="min-height: 100vh; position: relative;">
     <header class="jumbotron" >
         <h1 class=" text-center display-3">Hello, World!</h1>
     </header>
-    
+    <div class="container" style="min-height: 100vh; position: relative;">
         <div class="row align-items-center" style="height: 100%;">
             <div class="col-12 col-sm-6">
                 <div class="row" style="justify-content: center;">
@@ -61,7 +60,7 @@
                         
                         <p>Hey there, I'm Karthik Raj.</p>
                         <p>I'm a <span id="age"></span> year old passionate coder and a part time writer. 
-                            I'm Currently pursuing my B.Tech degree from <a href="http://mgmits.ac.in">Muthoot Institute of 
+                            I'm currently pursuing my B.Tech degree from <a href="http://mgmits.ac.in">Muthoot Institute of 
                                 Technology and Science,</a> Kochi.</p>
                         <p>I'm always eager to learn new things and solve problems.<br></p>
                         <p>In my free time, I usually scribble on <a href="https://medium.com/@karthikraj4423">my Medium page</a>, and I occasionally freelance as a content writer 
@@ -71,48 +70,27 @@
                     
                 
             </div>
-        </div>
-        
-        <!--
-<div class="row">
-            <script>
-                var reponames=[]
-                 const url="https://api.github.com/users/karthik4423/repos"
-            axios.get(url).then(function(datas){
-                console.log(datas.data.length)
-                for(var i=0;i<datas.data.length;i++){
-                    console.log(JSON.stringify(datas.data[i].fork))
-                    if(JSON.stringify(datas.data[i].fork)=='false'){
-                        reponames.push(JSON.stringify(datas.data[i].name))
-                    }
-                }
-                var commitlengths=[]
-                for(var i=0;i<reponames.length;i++){
-                    const url1="https://api.github.com/repos/karthik4423/"+reponames[i].slice(1,reponames[i].length-1)+"/commits"
-                    console.log(url1)
-                    axios.get(url1).then(function(datas1){
-                        console.log(datas1.data.length)
-                    commitlengths.push(JSON.stringify(datas1.data.length))
-                    console.log(commitlengths)
-                    })
-                }
-                console.log(commitlengths)
-                console.log(reponames)
-                document.getElementById("repos").innerHTML=commitlengths
-                console.log(datas)
-            })
-            
-            </script>
-           <p id="repos"></p>
-            </div>
-        -->
-        
-        </div>
-            
-        <div class="row justify-content-center">
-            <footer>NOpyright &copy;. Copy what you fancy - It's not like I have a lot going on here, anyway. (Also, this site is undergoing major revamps as we speak. Stay Tuned.)</footer>
-        </div>
-        
+            <!-- <div class="row justify-content-center">
+                <h2>What I've been coding</h2>
+                <div class="row justify-content-center">
+                    <h6>These are the most recent repositories that I've contributed to.</h6>
+                    <p id="repos">ho ho ho</p>
+                </div>
+            </div> -->
+            <br>
+            <!-- <div class="row justify-content-center">
+                <h6 class="col-12" >My Codeforces Rating</h6>
+                <div class="row justify-content-center">
+                    <p class="col-12" id="maxrank"></p>
+                    <p class="col-12" id="maxrating"></p>
+                    <p class="col-12" id="rank"></p>
+                    <p class="col-12" id="rating"></p>
+                </div>
+            </div> -->
+        </div>    
+    </div>
+    <div class="row justify-content-center">
+        <footer>NOpyright &copy;. Copy what you fancy - It's not like I have a lot going on here, anyway. (Also, this site is undergoing major revamps as we speak. Stay Tuned.)</footer>
     </div>
 
     
@@ -126,7 +104,9 @@
             document.getElementById('age').innerText = `${actualage}`;
         };
     </script>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./githubapi.js"></script>
+    <script src="./codeforcesapi.js"></script>
 
 </body>
 
