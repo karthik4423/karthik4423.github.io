@@ -6,9 +6,7 @@ var reponames = [];
 const url = "https://api.github.com/users/karthik4423/repos";
 axios
   .get(url, {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
+    
   })
   .then(function (datas) {
     console.log(datas.data.length);
