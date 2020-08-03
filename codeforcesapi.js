@@ -12,8 +12,8 @@ axios.get(profileurl).then(function (datas) {
   maxrating = "Highest Rating : " + maxrating;
   rank = "Current Rank : " + rank.slice(1, rank.length - 1);
   rating = "Current Rating : " + rating;
-  document.getElementById("maxrank").innerHTML = maxrank;
-  document.getElementById("maxrating").innerHTML = maxrating;
-  document.getElementById("rank").innerHTML = rank;
-  document.getElementById("rating").innerHTML = rating;
+  // document.getElementById("maxrank").innerHTML = maxrank;
+  // document.getElementById("maxrating").innerHTML = maxrating;
+  // document.getElementById("rank").innerHTML = rank;
+  // document.getElementById("rating").innerHTML = rating;
 });
