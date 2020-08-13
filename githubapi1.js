@@ -1,35 +1,49 @@
 const axios = window.axios;
 
-var datas;
-const url = "http://157.245.109.70:8000/";
-axios
-  .get(url, {})
-  .then((datas) => {
-    //console.log(datas);
-    addData(datas);
-  })
-  .catch((err) => {
-    console.log("oops. server down.");
-  });
-
-p = 0;
-q = 1;
-reponames = [];
-languages = [];
+var reponames = [];
+var commitlengths = [];
 var divId = 1;
-
-function addData(datas) {
-  len = datas.data.length / 2;
-  for (var i = 0; i < len; i++) {
-    // console.log("inloop");
-    // console.log(datas.data[p], p, q);
-    reponames.push(datas.data[p]);
-    languages.push(datas.data[q]);
-    p += 2;
-    q += 2;
+var languages = [];
+var commitDates = [];
+const url = "https://api.github.com/users/karthik4423/repos";
+axios.get(url, {}).then(function (datas) {
+  //console.log(datas.data);
+  for (var i = 0; i < datas.data.length; i++) {
+    if (JSON.stringify(datas.data[i].fork) == "false") {
+      reponames.push([
+        datas.data[i].updated_at,
+        datas.data[i].name,
+        datas.data[i].language,
+        datas.data[i].description,
+        datas.data[i].languages_url,
+      ]);
+    }
   }
-  //console.log(reponames, languages);
-  setTimeout(addElement, 120);
+
+  setTimeout(dateFormatter, 100);
+  setTimeout(addElement, 1200);
+});
+
+function dateFormatter() {
+  for (i = 0; i < reponames.length; i++) {
+    reponames[i][0] = new Date(reponames[i][0]);
+  }
+  reponames.sort(function (a, b) {
+    return b[0] - a[0];
+  });
+  // console.log(reponames);
+  getLanguages();
+}
+
+function getLanguages() {
+  for (i = 0; i < 4; i++) {
+    // console.log("entered for");
+    // console.log(reponames[i][1]);
+    axios.get(reponames[i][4], {}).then(function (datas) {
+      // console.log("yo : ", datas.data);
+      languages.push(Object.entries(datas.data));
+    });
+  }
 }
 
 function addElement() {
@@ -57,7 +71,7 @@ function addElement() {
       reponames[i][2] +
       "</p>" +
       "<p><b> Last Updated : </b>" +
-      new Date(reponames[i][0]) +
+      reponames[i][0] +
       "</p>" +
       "</div>" +
       '<div style="height:inherit;width:auto">' +
