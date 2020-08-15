@@ -1,5 +1,7 @@
 const axios = window.axios;
-
+console.log(
+  "The GitHub data you're now seeing is loaded at the instant you visit my website. I'm working on a stable server setup for this."
+);
 var reponames = [];
 var commitlengths = [];
 var divId = 1;
