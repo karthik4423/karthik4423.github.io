@@ -118,14 +118,16 @@
 
     
     <script>
-        window.onload = () => {
+       // window.onload = () => {
             //document.getElementById('copyright').innerText += ` ${new Date().getFullYear()}`;
             const birthdate = new Date('03/26/1999');
             const currentdate = new Date();
             const age = (currentdate.getTime() - birthdate.getTime()) / (1000 * 3600 * 24 * 365);
             const actualage = Math.floor(age);
+            //console.log("age")
             document.getElementById('age').innerText = `${actualage}`;
-        };
+       // };
+       
     </script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- <script src="./githubapi.js"></script> -->
